@@ -126,6 +126,15 @@ p {
   background-color: #a5d6a7;
 }
 
+.navbar__toggle-btn {
+  position: absolute;
+  top: 14px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
+}
+
 /* Home */
 #home {
   background: url("img/Brown\ and\ Beige\ Minimalist\ Beauty\ Collection\ YouTube\ Channel\ Art\ \ \(1\).png")
@@ -412,6 +421,7 @@ p {
 }
 
 .testimonial__speech-bubble {
+  width: 100%;
   padding: 18px;
   background-color: var(--color-white);
   border-radius: var(--size-border-radius);
@@ -448,4 +458,44 @@ p {
   transition: all var(--animation-duration) ease-in;
   color: #006064;
   transform: scale(1.2);
+}
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .about__majors {
+    flex-direction: column;
+  }
+
+  .major {
+    margin-bottom: 38px;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+
+  .project {
+    flex-grow: 1;
+  }
+
+  .testimonial__avatar {
+    width: 80px;
+    height: 80px;
+  }
 }
